@@ -1,0 +1,111 @@
+{
+  "database": {
+    "rules": "database.rules.json"
+  },
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "hosting": {
+    "public": "build",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "headers": [
+      {
+        "source": "**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=3600, no-cache"
+          },
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": "*"
+          },
+          {
+            "key": "Access-Control-Max-Age",
+            "value": "600"
+          }
+        ]
+      },
+      {
+        "source": "/sw.js",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "private, no-cache"
+          }
+        ]
+      },
+      {
+        "source": "**/*.chunk.*.js",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=31536000"
+          }
+        ]
+      },
+      {
+        "source": "/",
+        "headers": [
+          {
+            "key": "Link",
+            "value": "</bundle.ad90e.js>; rel=preload; as=script, </style.8cceb.css>; rel=preload; as=style, </route-home.chunk.d6114.js>; rel=preload; as=script"
+          }
+        ]
+      },
+      {
+        "source": "/myevents",
+        "headers": [
+          {
+            "key": "Link",
+            "value": "</bundle.ad90e.js>; rel=preload; as=script, </style.8cceb.css>; rel=preload; as=style, </route-myevents.chunk.6f2ff.js>; rel=preload; as=script"
+          }
+        ]
+      },
+      {
+        "source": "/explore",
+        "headers": [
+          {
+            "key": "Link",
+            "value": "</bundle.ad90e.js>; rel=preload; as=script, </style.8cceb.css>; rel=preload; as=style, </route-explore.chunk.74cfe.js>; rel=preload; as=script"
+          }
+        ]
+      },
+      {
+        "source": "/profile",
+        "headers": [
+          {
+            "key": "Link",
+            "value": "</bundle.ad90e.js>; rel=preload; as=script, </style.8cceb.css>; rel=preload; as=style, </route-profile.chunk.a2a26.js>; rel=preload; as=script"
+          }
+        ]
+      },
+      {
+        "source": "/event",
+        "headers": [
+          {
+            "key": "Link",
+            "value": "</bundle.ad90e.js>; rel=preload; as=script, </style.8cceb.css>; rel=preload; as=style, </route-event.chunk.dd39b.js>; rel=preload; as=script"
+          }
+        ]
+      },
+      {
+        "source": "/about",
+        "headers": [
+          {
+            "key": "Link",
+            "value": "</bundle.ad90e.js>; rel=preload; as=script, </style.8cceb.css>; rel=preload; as=style, </route-about.chunk.780cb.js>; rel=preload; as=script"
+          }
+        ]
+      }
+    ]
+  },
+  "storage": {
+    "rules": "storage.rules"
+  }
+}

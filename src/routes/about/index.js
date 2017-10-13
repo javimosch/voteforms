@@ -1,11 +1,11 @@
 import { h, Component } from 'preact';
 import style from './style';
 
-export default class Home extends Component {
+export default class extends Component {
 	render() {
 		return (
 			<div class="route-wrapper">
-				<h1>Home</h1>
+				<h1>About</h1>
 				<div class="alert alert-primary" role="alert">
   This is a primary alert—check it out!
 </div>
