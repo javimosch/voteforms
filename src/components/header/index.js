@@ -18,7 +18,7 @@ export default class Header extends Component {
 	activeLink(route){
 		let cls = '';
 		if(win.location){
-			cls = win.location.href.replace(root.location.origin,'');
+			cls = win.location.href.replace(win.location.origin,'');
 			cls = cls==route?' active' : "";
 		}
 		return "nav-item"+cls;
@@ -34,7 +34,7 @@ export default class Header extends Component {
 				    <span class="navbar-toggler-icon"></span>
 				  </button>
 				  <div class={collapsable}>
-				    <a class="navbar-brand" href="/">Meetful</a>
+				    <a class="navbar-brand" href="/">Voteforms</a>
 				    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 				      <li class={this.activeLink('/')}>
 				        <Link className="nav-link"  href="/">About</Link>
